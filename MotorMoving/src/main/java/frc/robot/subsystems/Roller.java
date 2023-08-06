@@ -35,12 +35,8 @@ public void intake(){
     rollerMotor.set(Settings.Roller.INTAKE_SPEED);
 }
 
-public void outtake(boolean fast){
-    if (fast) {
-        rollerMotor.set(Settings.Roller.FAST_OUTTAKE_SPEED);
-    } else {
-        rollerMotor.set(Settings.Roller.SLOW_OUTTAKE_SPEED);
-    }
+public void outtake(double rollSpeed){
+    rollerMotor.set(rollSpeed);
 }
 
 public void stop(){
