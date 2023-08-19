@@ -11,6 +11,5 @@ public class Settings {
        // public static final double FAST_OUTTAKE_SPEED = 0.7;
        // public static final double SLOW_OUTTAKE_SPEED = 0.1;
         public static final double INTAKE_SPEED = -0.7;
-        
-}
+    }
 }

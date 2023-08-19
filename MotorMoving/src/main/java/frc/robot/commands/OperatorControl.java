@@ -9,11 +9,6 @@ import frc.robot.subsystems.Roller;
 public class OperatorControl extends CommandBase{
     private Roller roller;
     private XboxController controller;
-    public double rollSpeed =  controller.getRightTriggerAxis();
-
-    public void variableSpeed(double rollSpeed){
-        System.out.println(rollSpeed);
-    }
 
     public OperatorControl(Roller roller){
         addRequirements(roller);
@@ -26,7 +21,7 @@ public class OperatorControl extends CommandBase{
         if (controller.getRightBumper()) {
             roller.intake();
         } else if (controller.getRightTriggerAxis()>0) {
-            roller.outtake(rollSpeed);
+            roller.outtake(controller.getRightTriggerAxis());
         } else {
             roller.stop();
         }
